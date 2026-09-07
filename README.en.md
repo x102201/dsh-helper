@@ -53,6 +53,8 @@ This is not three unrelated windows side by side. It is three dedicated instance
 
 ## 3. Deliver: configure several instances, export several packs
 
+**The environment is the product; export is delivery.**
+
 It took days to get the support, development, and testing dedicated instances running together — plugins, presets, and flow aligned step by step.
 
 Then it has to be delivered. What breaks is not “can they use it”, but that **every delivery feels like rebuilding the project**:

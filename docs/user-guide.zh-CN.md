@@ -1,4 +1,4 @@
-# DSHHelper 用户指南
+# dsh-helper 用户指南
 
 [English](user-guide.en.md) · [返回首页](../README.md)
 
@@ -26,15 +26,15 @@
 | **制品（.dshpack）** | 把「已调好的实例」导出成的规格文件；导入后按当前系统复原出可交互的工作间 |
 | **Agent 预设** | dsh 内一份完整能力组合（工具 / 人设等）；仍在实例内的 dsh 界面中管理 |
 
-**一实例 = 一份独立 `DSH_HOME` = 一套固定插件。** 定向任务拆到不同实例，就不会在同一个工作空间里互相冲突。插件安装与 Agent 预设仍在 **dsh 网页界面** 中完成；DSHHelper 负责实例的创建、运行、分屏与制品分发。
+**一实例 = 一份独立 `DSH_HOME` = 一套固定插件。** 定向任务拆到不同实例，就不会在同一个工作空间里互相冲突。插件安装与 Agent 预设仍在 **dsh 网页界面** 中完成；dsh-helper 负责实例的创建、运行、分屏与制品分发。
 
-![DSHHelper 模型](assets/zh-CN/helper-model.svg)
+![dsh-helper 模型](assets/zh-CN/helper-model.svg)
 
 ---
 
 ## 安装
 
-安装包发布在 [GitHub Releases](https://github.com/x102201/deepseek-harness-helper/releases)。版本号以安装包文件名为准。
+安装包发布在 [GitHub Releases](https://github.com/x102201/dsh-helper/releases)。版本号以安装包文件名为准。
 
 ### 系统要求
 
@@ -49,30 +49,30 @@
 
 | 平台 | 示例 |
 |------|------|
-| Windows x64 | `DSHHelper_0.1.1_windows_x64-setup.exe` |
-| Windows arm64 | `DSHHelper_0.1.1_windows_arm64-setup.exe` |
-| macOS | `DSHHelper_0.1.1_macos_arm64.dmg` |
-| Linux | `DSHHelper_0.1.1_linux_amd64.deb` / `.AppImage` |
+| Windows x64 | `dsh-helper_0.1.3_windows_x64-setup.exe` |
+| Windows arm64 | `dsh-helper_0.1.3_windows_arm64-setup.exe` |
+| macOS | `dsh-helper_0.1.3_macos_arm64.dmg` |
+| Linux | `dsh-helper_0.1.3_linux_x64.deb` / `.AppImage` |
 
 ### Windows
 
 1. 从 Releases 下载对应架构的 `-setup.exe`
 2. 双击运行安装向导
-3. 从开始菜单或桌面快捷方式启动 **DSHHelper**
+3. 从开始菜单或桌面快捷方式启动 **dsh-helper**
 
 若 SmartScreen 提示「已阻止」「未知发布者」：点 **更多信息** → **仍要运行**（安装包来自本仓库 Releases，当前未做代码签名）。
 
 ### macOS
 
-1. 打开 `.dmg`，将 **DSHHelper** 拖入「应用程序」
+1. 打开 `.dmg`，将 **dsh-helper** 拖入「应用程序」
 2. 若提示「无法验证开发者」或无法打开：在 Finder 中右键应用 → **打开**，或到「系统设置 → 隐私与安全性」点允许
 
 当前构建未使用 Apple 开发者证书签名/公证（无个人开发者账户时属预期）。
 
 ### Linux
 
-- **Debian / Ubuntu**：`sudo dpkg -i DSHHelper_*_linux_amd64.deb`（arm64 同理）
-- **AppImage**：`chmod +x DSHHelper_*.AppImage` 后运行
+- **Debian / Ubuntu**：`sudo dpkg -i dsh-helper_*_linux_x64.deb`（arm64 同理）
+- **AppImage**：`chmod +x dsh-helper_*.AppImage` 后运行
 
 安装包体积较小，**不含**完整运行时二进制；第一次使用会按清单下载 Node.js 与 DeepSeek Harness。
 
@@ -189,7 +189,7 @@
 
 在 **设置 → 通用** 可查看路径，并使用 **更改…** / **迁移…**。迁移会先停止全部实例；过程中请勿强制结束应用。
 
-卸载 DSHHelper **不会自动删除**数据目录。若需彻底清理，卸载后手动删除 `.dshHelper` 文件夹。
+卸载 dsh-helper **不会自动删除**数据目录。若需彻底清理，卸载后手动删除 `.dshHelper` 文件夹。
 
 ---
 
@@ -197,7 +197,7 @@
 
 | 项 | 位置 / 说明 |
 |----|-------------|
-| 外观 | 设置 → 通用 → 外观（浅色 / 深色 / 跟随系统）；仅影响 Helper 壳，不影响实例内 dsh 页面 |
+| 外观 | 设置 → 通用 → 外观（浅色 / 深色 / 跟随系统）；仅影响 dsh-helper 壳，不影响实例内 dsh 页面 |
 | 关联 .dshpack | 设置 → 通用；双击制品进入导入 |
 | 关闭主窗口时 | 停止全部实例 / 每次询问 / 保持运行（常配合托盘） |
 | 关闭标签时 | 停止实例 / 保持运行 |
@@ -221,4 +221,4 @@
 | 运行时损坏 | 实例详情中可「从缓存重建运行时」（保留工作区与会话数据） |
 | Linux AppImage 体积大 | AppImage 自带依赖，大于 `.deb` 属正常 |
 
-仍无法解决时，可到 [GitHub Issues](https://github.com/x102201/deepseek-harness-helper/issues) 反馈，或在应用内 **设置 → 关于 → 反馈**。
+仍无法解决时，可到 [GitHub Issues](https://github.com/x102201/dsh-helper/issues) 反馈，或在应用内 **设置 → 关于 → 反馈**。

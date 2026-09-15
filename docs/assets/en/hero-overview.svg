@@ -18,7 +18,7 @@
       </g>
     </g>
   </g>
-  <text x="148" y="72" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" fill="#0f172a">DSHHelper</text>
+  <text x="148" y="72" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" fill="#0f172a">dsh-helper</text>
   <text x="148" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">DeepSeek Harness desktop helper</text>
   <g transform="translate(148,118)">
     <rect width="150" height="56" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>

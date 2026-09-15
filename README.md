@@ -1,6 +1,6 @@
-# DSHHelper — 一台电脑，并行无限实例
+# dsh-helper — 一台电脑，并行无限实例
 
-[English](README.en.md) · [用户指南](docs/user-guide.zh-CN.md) · [Releases](https://github.com/x102201/deepseek-harness-helper/releases)
+[English](README.en.md) · [用户指南](docs/user-guide.zh-CN.md) · [Releases](https://github.com/x102201/dsh-helper/releases)
 
 ![演示](docs/assets/video/dsh-helper-demo.gif)
 

@@ -1,6 +1,6 @@
-# DSHHelper — Unlimited parallel dsh instances on one desktop
+# dsh-helper — Unlimited parallel dsh instances on one desktop
 
-[中文](README.md) · [User Guide](docs/user-guide.en.md) · [Releases](https://github.com/x102201/deepseek-harness-helper/releases)
+[中文](README.md) · [User Guide](docs/user-guide.en.md) · [Releases](https://github.com/x102201/dsh-helper/releases)
 
 ![Demo](docs/assets/video/dsh-helper-demo.gif)
 

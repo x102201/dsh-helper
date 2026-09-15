@@ -1,4 +1,4 @@
-# DSHHelper User Guide
+# dsh-helper User Guide
 
 [中文](user-guide.zh-CN.md) · [Back to README](../README.en.md)
 
@@ -26,15 +26,15 @@ For people who already have an installer: install, multi-instance, and package i
 | **Package (.dshpack)** | An export of a tuned instance; import restores an interactive workspace on the current OS |
 | **Agent preset** | A full capability composition inside dsh (tools / persona); still managed in the instance’s dsh UI |
 
-**One instance = one `DSH_HOME` = one fixed plugin set.** Split directed tasks across instances so they do not conflict in a single workspace. Plugin install and Agent presets stay in the **dsh web UI**; DSHHelper creates, runs, splits panes, and ships packages.
+**One instance = one `DSH_HOME` = one fixed plugin set.** Split directed tasks across instances so they do not conflict in a single workspace. Plugin install and Agent presets stay in the **dsh web UI**; dsh-helper creates, runs, splits panes, and ships packages.
 
-![DSHHelper model](assets/en/helper-model.svg)
+![dsh-helper model](assets/en/helper-model.svg)
 
 ---
 
 ## Install
 
-Installers are on [GitHub Releases](https://github.com/x102201/deepseek-harness-helper/releases). The version is embedded in the file name.
+Installers are on [GitHub Releases](https://github.com/x102201/dsh-helper/releases). The version is embedded in the file name.
 
 ### System requirements
 
@@ -49,30 +49,30 @@ Installers are on [GitHub Releases](https://github.com/x102201/deepseek-harness-
 
 | Platform | Example |
 |----------|---------|
-| Windows x64 | `DSHHelper_0.1.1_windows_x64-setup.exe` |
-| Windows arm64 | `DSHHelper_0.1.1_windows_arm64-setup.exe` |
-| macOS | `DSHHelper_0.1.1_macos_arm64.dmg` |
-| Linux | `DSHHelper_0.1.1_linux_amd64.deb` / `.AppImage` |
+| Windows x64 | `dsh-helper_0.1.3_windows_x64-setup.exe` |
+| Windows arm64 | `dsh-helper_0.1.3_windows_arm64-setup.exe` |
+| macOS | `dsh-helper_0.1.3_macos_arm64.dmg` |
+| Linux | `dsh-helper_0.1.3_linux_x64.deb` / `.AppImage` |
 
 ### Windows
 
 1. Download the `-setup.exe` for your architecture from Releases
 2. Run the installer
-3. Launch **DSHHelper** from the Start menu or desktop shortcut
+3. Launch **dsh-helper** from the Start menu or desktop shortcut
 
 If SmartScreen says the app is blocked / from an unknown publisher: **More info** → **Run anyway** (builds from this repo’s Releases are not code-signed).
 
 ### macOS
 
-1. Open the `.dmg` and drag **DSHHelper** into Applications
+1. Open the `.dmg` and drag **dsh-helper** into Applications
 2. If macOS says the developer cannot be verified: right-click → **Open**, or allow under System Settings → Privacy & Security
 
 Current builds are not signed or notarized with an Apple Developer certificate (expected without a paid developer account).
 
 ### Linux
 
-- **Debian / Ubuntu**: `sudo dpkg -i DSHHelper_*_linux_amd64.deb` (arm64 likewise)
-- **AppImage**: `chmod +x DSHHelper_*.AppImage`, then run
+- **Debian / Ubuntu**: `sudo dpkg -i dsh-helper_*_linux_x64.deb` (arm64 likewise)
+- **AppImage**: `chmod +x dsh-helper_*.AppImage`, then run
 
 The installer is small and does **not** ship full runtime binaries. The first use downloads Node.js and DeepSeek Harness from the runtime manifest.
 
@@ -132,7 +132,7 @@ Treat each instance as a **dedicated instance** (support / coding / testing). To
 
 ![Package flow](assets/en/dshpack-flow.svg)
 
-A `.dshpack` ships a **configured instance**, not a plugin shopping list. On import, DSHHelper restores the environment for the current platform (Node / dsh versions, patches, presets, settings, declared plugins). One package is one instance; configure several dedicated instances, export several packs. Import does not restore the split-pane layout.
+A `.dshpack` ships a **configured instance**, not a plugin shopping list. On import, dsh-helper restores the environment for the current platform (Node / dsh versions, patches, presets, settings, declared plugins). One package is one instance; configure several dedicated instances, export several packs. Import does not restore the split-pane layout.
 
 ### Importer
 
@@ -189,7 +189,7 @@ All user data lives under one root:
 
 **Settings → General** shows the path and offers **Change…** / **Migrate…**. Migration stops all instances first; do not force-quit during migration.
 
-Uninstalling DSHHelper **does not** remove the data directory. Delete `.dshHelper` manually for a clean wipe.
+Uninstalling dsh-helper **does not** remove the data directory. Delete `.dshHelper` manually for a clean wipe.
 
 ---
 
@@ -221,4 +221,4 @@ Uninstalling DSHHelper **does not** remove the data directory. Delete `.dshHelpe
 | Runtime damaged | Details → rebuild runtime from cache (keeps workspace and session data) |
 | Large Linux AppImage | AppImages bundle deps; larger than `.deb` by design |
 
-If you are still stuck, open a [GitHub Issue](https://github.com/x102201/deepseek-harness-helper/issues) or use **Settings → About → Feedback** in the app.
+If you are still stuck, open a [GitHub Issue](https://github.com/x102201/dsh-helper/issues) or use **Settings → About → Feedback** in the app.
